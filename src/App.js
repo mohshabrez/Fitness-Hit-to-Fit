@@ -1,17 +1,17 @@
 import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import {
-  Dashboard,
-  Exercises,
-  Foods,
-  Goals,
-  Login,
-  Signup,
-} from "./pages/index";
-import { Navbar, ProtectedRoute } from "./components/index";
+
+import { NavBar} from "./components/NavBar";
+import { ProtectedRoute} from "./components/ProtectedRoute";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { USER_DATA } from "./redux/actionConstants";
+import { Login } from "./pages/Login";
+import { Signup } from "./pages/Signup";
+import { Dashboard } from "./pages/Dashboard";
+import { Exercises } from "./pages/Exercises";
+import { Foods } from "./pages/Foods";
+import { Goals } from "./pages/Goals";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,10 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <NavBar />
 
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup />} />
 
         <Route
