@@ -23,7 +23,7 @@ export const Goals = () => {
     },[])
 
     return(
-        <div className="p-4 flex flex-col gap-4 item">
+        <div className="p-4 flex flex-col gap-4 text-white">
       <h2>Add a new goal:</h2>
 
       <div className="flex gap-2 flex-wrap items-center">
@@ -41,7 +41,7 @@ export const Goals = () => {
             value={userInput.goalName}
             type="text"
             placeholder="enter food name"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
@@ -59,7 +59,7 @@ export const Goals = () => {
             value={userInput.goalDescription}
             type="text"
             placeholder="enter description"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
@@ -77,7 +77,7 @@ export const Goals = () => {
             value={userInput.targetDate}
             type="date"
             placeholder="enter target calories"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
@@ -95,7 +95,7 @@ export const Goals = () => {
             value={userInput.targetCaloriesValue}
             type="number"
             placeholder="enter target calories"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
@@ -109,7 +109,7 @@ export const Goals = () => {
             )
           }
           value={userInput.status}
-          className="border-2 outline-2 outline-blue-500 rounded-md h-max self-end px-2"
+          className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
         >
           {goalStatus.map((status) => {
             return (
@@ -122,7 +122,7 @@ export const Goals = () => {
 
         <button
           onClick={handleAddGoal}
-          className={`text-white  py-0.5 px-4 rounded-md h-max self-end`}
+          className="text-blue bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold px-2   rounded-md border-2 border-cyan-300"
         >
           Add
         </button>

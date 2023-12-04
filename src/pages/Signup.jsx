@@ -26,16 +26,16 @@ export const Signup = () => {
     }
 
     return(
-        <div className="p-4 min-h-[80vh] justify-center items-center">
-            <form onSubmit={handleSignup} className="border-gray border-2 flex flex-col gap-2 w-max py-2 px-4 rounded-md">
-              <label className="flex flex-col">
+        <div className="p-4 min-h-[80vh] flex justify-center items-center">
+            <form onSubmit={handleSignup} className="bg-gray-400 border-gray border-2 flex flex-col gap-7 w-[300px] h-[450px] py-2 px-4 rounded-md">
+              <label className="flex flex-col bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold">
                     Email: 
                     <input value={userInput.email} onChange={(e) => dispatch(userSignupInput({...userInput, email: e.target.value}))}
-                    type="text" placeholder="enter Email" className="mt-1 border-2 border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
+                    type="text" placeholder="Enter Email" className="mt-1 border-2 text-black border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
                     />
                 </label>  
-                <label className="flex flex-col">
-          password:
+                <label className="flex flex-col bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold">
+          Password:
           <input
             value={userInput.password}
             onChange={(e) =>
@@ -44,12 +44,12 @@ export const Signup = () => {
               )
             }
             type="text"
-            placeholder="enter password"
-            className="mt-1 border-2 border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
+            placeholder="Enter Password"
+            className="mt-1 border- text-black border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
           />
         </label>
-        <label className="flex flex-col">
-          profile picture url:
+        <label className="flex flex-col bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold">
+          Profile Picture URL:
           <input
             value={userInput.profilePictureUrl}
             onChange={(e) =>
@@ -61,12 +61,12 @@ export const Signup = () => {
               )
             }
             type="text"
-            placeholder="enter profile picture url"
-            className="mt-1 border-2 border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
+            placeholder="Enter Profile Picture URL"
+            className="mt-1 border-2 text-black border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
           />
         </label>
-        <label className="flex flex-col">
-          username:
+        <label className="flex flex-col bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold">
+          UserName:
           <input
             value={userInput.username}
             onChange={(e) =>
@@ -75,23 +75,23 @@ export const Signup = () => {
               )
             }
             type="text"
-            placeholder="enter username"
-            className="mt-1 border-2 border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
+            placeholder="Enter Username"
+            className="mt-1 border-2 text-black border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
           />
         </label>
 
         <Link
           to="/login"
-          className="mt-1 max-w-max text-blue-600 hover:underline"
+          className="mt-1 max-w-max text-blue-600 underline"
         >
-          login
+          Login?
         </Link>
 
         {error && <small className="text-red-600">{`* ${error}`}</small>}
 
         <button
           type="submit"
-          className={`text-blue  p-1 rounded-md mt-2`}
+          className="text-blue bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold p-1 rounded-md border-2 border-cyan-300"
         >
           Signup
         </button>

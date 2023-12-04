@@ -10,7 +10,6 @@ export const Dashboard = () => {
     const goals = useSelector((state) => state.goalState.goals);
     const { _id: userId} = useSelector((state) => state.authState.user);
     const dispatch = useDispatch()
-
     useEffect(() => {
         if(exercises.length <=0 && foods.length <=0 && goals.length <=0){
             dispatch(getAllExercises(userId))

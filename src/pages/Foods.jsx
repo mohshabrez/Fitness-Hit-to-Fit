@@ -22,7 +22,7 @@ export const Foods = () => {
     },[])
     
     return(
-        <div className="p-4 flex flex-col gap-4 item">
+        <div className="p-4 flex flex-col gap-4 text-white">
             <h2>Add a new Food Item:</h2>
 
             <div className="flex gap-2 flex-wrap">
@@ -39,8 +39,8 @@ export const Foods = () => {
             }
             value={userInput.foodName}
             type="text"
-            placeholder="enter goal name"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            placeholder="Enter Goal Name"
+            className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
                 </label>
                 <label className="flex flex-col">
@@ -57,7 +57,7 @@ export const Foods = () => {
             value={userInput.calories}
             type="number"
             placeholder="enter calories"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
@@ -75,7 +75,7 @@ export const Foods = () => {
             value={userInput.protein}
             type="number"
             placeholder="enter protein"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 rounded-md text-black max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
@@ -93,7 +93,7 @@ export const Foods = () => {
             value={userInput.carbohydrates}
             type="number"
             placeholder="enter carbohydrates"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 text-black rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
@@ -111,13 +111,13 @@ export const Foods = () => {
             value={userInput.fat}
             type="number"
             placeholder="enter fat"
-            className="border-2 rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
+            className="border-2 mt-2 text-black rounded-md max-w-[10rem] px-1 outline-2 outline-blue-500"
           />
         </label>
 
         <button
           onClick={handleAddFood}
-          className={`text-white  py-0.5 px-4 rounded-md h-max self-end`}
+          className= "bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold rounded-md border-2 border-cyan-300 px-2 py-0"
         >
           Add
         </button>

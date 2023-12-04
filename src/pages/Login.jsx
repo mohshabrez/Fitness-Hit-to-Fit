@@ -28,17 +28,17 @@ export const Login = () => {
     },[isLoggedIn])
 
     return(
-        <div className="p-4 min-h-[80vh] flex justify-center- items-center">
-            <form onSubmit={handleLogin} className="border-gray border-2 flex flex-col gap-2 w-max py-2 px-4 rounded-md">
-                <label className="flex flex-col">
+        <div className=" p-4 min-h-[80vh] flex justify-center items-center">
+            <form onSubmit={handleLogin} className="bg-gray-400 border-gray border-2 flex flex-col gap-7 w-[250px] h-[350px] py-2 px-4 rounded-md">
+                <label className="flex flex-col bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold">
                     Email:
                     <input value={userInput.email} 
                     onChange={(e) => dispatch(userLoginInput({...userInput, email: e.target.value}))}
-                    type="email" placeholder="Enter Email" className="mt-1 border-2 border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
+                    type="email" placeholder="Enter Email" className="mt-1 text-black border-2 border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
                     />
                 </label>
-                <label className="flex flex-col">
-          password:
+                <label className="flex flex-col bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold">
+          Password:
           <input
             value={userInput.password}
             onChange={(e) =>
@@ -47,15 +47,15 @@ export const Login = () => {
               )
             }
             type="password"
-            placeholder="enter password"
-            className="mt-1 border-2 border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
+            placeholder="Enter Password"
+            className="mt-1 border-2 text-black border-gray-300 rounded-md px-2 outline-none focus:border-violet-400"
           />
         </label>
-        <Link to="/signup" className="mt-1 max-w-max text-blue-600 hover:underline">
-            signup
+        <Link to="/signup" className="mt-1 max-w-max text-blue-600 underline">
+            signup?
         </Link>
         {error && <small className="text-red-600">{`* ${error}`}</small>}
-            <button type="submit" className="text-blue p-1 rounded-md mt-2 ">
+            <button type="submit" className="text-blue bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold p-1 rounded-md border-2 border-cyan-300">
                 Login
             </button>
             <p onClick={() => 
@@ -63,7 +63,7 @@ export const Login = () => {
                     ...userInput, email: "testuser1@domain.com",
                     password: "testuser1",
                 }))
-            } className="hover:underline cursor-pointer self-center">Set Test Credentials</p>
+            } className="hover:underline cursor-pointer self-center text-blue-600">Set Test Credentials</p>
             </form>
 
         </div>

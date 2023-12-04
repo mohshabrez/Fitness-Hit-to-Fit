@@ -11,7 +11,7 @@ export const Exercises = () => {
     const error = useSelector((state) => state.exerciseState.exerciseError);
     const exercises = useSelector((state) => state.exerciseState.exercises)
     const dispatch = useDispatch()
-
+    console.log(userId)
     const exerciseList = ["Select an exercise", ...Object.keys(allExercises)];
     const durationList = ["Select DUration", ...durationInMinutes]
 
@@ -27,9 +27,9 @@ export const Exercises = () => {
     }, [])
 
     return(
-        <div className="p-4 flex flex-col gap-4">
+        <div className="p-4 flex flex-col gap-4 text-white">
             <h2>Add a new Exercise:</h2>
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-2 flex-wrap text-black ">
                 <select onChange={(e) => dispatch(
                     exerciseInput({
                         ...userInput, exerciseName: e.target.value
@@ -56,7 +56,7 @@ export const Exercises = () => {
                         )
                     })}
                 </select>
-                <button onClick={handleAddExercise} className="bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text px-4 rounded-md">
+                <button onClick={handleAddExercise} className="text-blue bg-gradient-to-r from-orange-700 to-red-500 text-transparent bg-clip-text font-semibold px-2   rounded-md border-2 border-cyan-300">
                     Add
                 </button>
             </div>

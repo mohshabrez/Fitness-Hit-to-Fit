@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="bg-gray-800 min-h-screen">
       <NavBar />
 
       <Routes>
